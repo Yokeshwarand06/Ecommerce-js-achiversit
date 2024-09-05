@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+        * {
+            margin: 10;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: whitesmoke;
+            color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            justify-content: space-evenly;
+           
+        
+        }
+    
+        header nav a {
+        
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+          
+        }
+     
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .auth-links a {
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-left: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .auth-links a:hover {
+            background-color: #eee;
+            text-decoration: underline;
+        }
+
+
+
+        /* body portion */
+        .container {
+            /* max-width: 1200px; */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .filter-buttons button {
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .filter-buttons button:hover {
+            background-color: #555;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 10px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+
+        }
+        .card img {
+           
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-bottom: 1px solid #ddd;
+            transition: transform .2s; 
+          
+            
+        }
+        .card img:hover{
+           border-radius: 20px;
+            transform: scale(1.5); 
+        }
+        .card-body {
+            padding: 15px;
+            
+        }
+        .card-title {
+            font-size: 17px;
+            margin-bottom: 10px;
+            height: 60px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .card-price {
+            font-size: 15px;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            font-size: 15px;
+            color: #555;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 15px;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .card-footer button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .card-footer button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+       
+
+
+       .container1 {
+        position: relative;
+        /* text-align: center; */
+        color: white;
+        margin: 0;
+    
+        }
+
+
+
+        .top-left {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        color: whitesmoke;
+        margin: 10px;
+        padding: 10px;
+        }
+      
+
+
+
+
+
+      
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Ecommerce</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+<nav class="auth-links">  
+        <a id="dy" href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; Login </a>
+        <a  id="yd" href="register.html"><i class="fa-solid fa-user-plus"></i> &nbsp; Register</a>
+        <a  id="hh" href="mycart.html"> <i class="fa-solid fa-cart-plus"></i> &nbsp; Cart (0)</a>
+</nav>
+</header>
+
+<div class="container">
+    <div class="mainimg">
+        <!-- <img src="main.png.jpg" style="width: 100%;"> -->
+        
+    </div>
+    <div class="container1">
+        <img src="main.png.jpg" alt="Main image" style="width:100%; border-radius: 10px;">
+        <div class="top-left">
+            <h1>New Season Arrivals</h1>
+            <p> This is  a  wider card with supporting text below as a natural lead-in to additional content.This content us a little bit longer</p>
+        </div>
+        </div>
+    <h2 class="title">Latest Products</h2>
+    <hr class="new">
+    <br>
+   
+    <div class="filter-buttons">
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('men\'s clothing')">Men's Clothing</button>
+        <button onclick="filterProducts('women\'s clothing')">Women's Clothing</button>
+        <button onclick="filterProducts('jewelery')">Jewelery</button>
+        <button onclick="filterProducts('electronics')">Electronics</button>
+    </div>
+    
+    <div class="products-grid" id="product-container">
+        <!-- Products -->
+    </div>
+</div>
+
+<footer>
+    Made with ❤️ by <a href="yd.html">YD</a>
+</footer>
+
+<script>
+    let allProducts = [];
+
+    
+    fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(products => {
+            allProducts = products;
+            displayProducts(allProducts); // Display all products by default
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+    function displayProducts(products) {                                      
+                                                                                         //  display products 
+        const container = document.getElementById('product-container');
+        container.innerHTML = '';                                                       // Clear the container
+        
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            card.innerHTML = `
+                <img src="${product.image}" alt="${product.title}">
+                <div class="card-body">
+                    <h3 class="card-title">${product.title}</h3>
+                    <p class="card-price">$${product.price}</p>
+                    <p class="card-description">${product.description}</p>
+                </div>
+                <div class="card-footer">
+                    <button>Details</button>
+                    <button>Add to Cart</button>
+                </div>
+            `;
+            
+            container.appendChild(card);
+        });
+    }
+
+    // Function to filter products by category
+    function filterProducts(category) {
+        if (category === 'all') {
+            displayProducts(allProducts);
+        } else {
+            const filteredProducts = allProducts.filter(product => product.category === category);
+            displayProducts(filteredProducts);
+        }
+    }
+</script>
+
+</body>
+</html>
